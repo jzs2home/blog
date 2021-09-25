@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>部落格發布</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="static\lib\editormd\css\editormd.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+<nav class="ui inverted attached segment m-padded-tb-mini ">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">管理後台</h2>
+            <a href="#" class=" active m-item item m-mobile-hide"><i class="mini home icon"></i>部落格</a>
+            <a href="#" class=" m-item item m-mobile-hide"><i class="mini idea icon"></i>分類</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>標籤</a>
+            <div class="right m-item m-mobile-hide menu">
+                <div class="ui dropdown | item">
+                    <div class="text">
+                        <img class="ui avatar image" src="../static/images/kokage_tree_necchusyou_drink.png">
+                        賣南瓜
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a hres="#" class="item">移除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<div class="ui attached pointing menu">
+    <div class="ui container">
+        <div class="right menu">
+            <a href="#" class="teal active item">發布</a>
+            <a href="#" class=" item">列表</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <form action="#" method="post" class="ui form">
+            <div class="required field">
+                <div class="ui left labeled input">
+                    <div class="ui selection compact teal basic dropdown label">
+                        <input type="hidden" value="我是作者">
+                        <i class="dropdown icon"> </i>
+                        <div class="text">我是作者</div>
+                        <div class="menu">
+                            <div class="item" data-value="我是作者">我是作者</div>
+                            <div class="item" data-value="轉傳分享">轉傳分享</div>
+                            <div class="item" data-value="翻成中文">翻成中文</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="title" placeholder="標題">
+                    </div>
+
+                </div>
+                <div class="field">
+                    <div id="md-content" style="z-index: 1 !important;">
+                        <textarea placeholder="文章內容" name="content" ">
+                        [TOC]
+
+                        #### Disabled options
+
+                        - TeX (Based on KaTeX);
+                        - Emoji;
+                        - Task lists;
+                        - HTML tags decode;
+                        - Flowchart and Sequence Diagram;
+
+
+                        </textarea>
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <div class="ui left labeled action input">
+                            <label class="ui compact teal basic label ">分類</label>
+                            <div class="ui fluid selection dropdown">
+                                <input type="hidden">
+                                <i class="dropdown icon"> </i>
+                                <div class="default text">分類</div>
+                                <div class="menu">
+                                    <div class="item" data-value="1">待修文章</div>
+                                    <div class="item" data-value="2">生活</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui left labeled action input">
+                            <label class="ui compact teal basic label ">標籤</label>
+                            <div class="ui fluid selection dropdown">
+                                <input type="hidden">
+                                <i class="dropdown icon"> </i>
+                                <div class="default text">標籤</div>
+                                <div class="menu">
+                                    <div class="item" data-value="1">南瓜</div>
+                                    <div class="item" data-value="2">苦瓜</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="ui left labeled input">
+                    <label class="ui teal basic label">主要圖片</label>
+                </div>
+                <input type="text" name="indexPicture" placeholder="圖片引用地址">
+            </div>
+            <div class="inline fields">
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="recommend" name="recommend" checked class="hidden">
+                        <label for="recommend">推薦 </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="shareInfo" name="shareInfo" class="hidden">
+                        <label for="shareInfo">轉載 </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="appreciation" name="appreciation" class="hidden">
+                        <label for="appreciation">按讚 </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="commend" name="commend" class="hidden">
+                        <label for="commend">意見 </label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui error message">
+
+
+            </div>
+
+    </div>
+    <div class="ui right aligned container">
+        <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+        <button class="ui secondary button">保存</button>
+        <button class="ui teal button">發布</button>
+
+    </div>
+    </form>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid">
+            <div class="three wide column">
+                <div class="item">
+                    <img src="../static/images/wechat.jpg" class="ui rounded image" alt="" style="width: 100px">
+                </div>
+            </div>
+        </div>
+        <div class="three wide column">
+            <h4 class="ui inverted header">NEW BLOG</h4>
+            <div class="ui inverted link list">
+                <a href="#" class="item">關於我們</a>
+                <a href="#" class="item">刻意練習</a>
+                <a href="#" class="item">失敗要趁早</a>
+            </div>
+
+        </div>
+        <div class="three wide column"></div>
+        <h4 class="ui inverted header">聯繫我們</h4>
+        <div class="ui inverted link list">
+            <a href="#" class="item">網址1</a>
+            <a href="#" class="item">網址2</a>
+            <a href="#" class="item">網址3</a>
+        </div>
+    </div>
+    <div class="seven wide column">
+        <h4 class="ui inverted header">寫作靈感</h4>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">先做出一個作品</p>
+    </div>
+    </div>
+
+    <div class="ui inverted section divider"></div>
+    <p class="m-text-thin m-text-spaced m-opacity-mini"> &copy; 2020 賣南瓜.com 版權所有 </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="static\lib\editormd\editormd.js"></script>
+<script>
+    var contentEditor;
+
+    $(function () {
+        contentEditor = editormd("md-editormd", {
+            width: "100%",
+            height: 640,
+            syncScrolling: "single",
+            path: "static\\lib"
+        });
+
+
+    });
+
+
+    $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        }
+    );
+
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    });
+
+    $('.ui.form').form({
+            fields: {
+                title: {
+                    identifier: 'title',
+                    rules: [{
+                        type: 'empty',
+                        prompt: '標題:請輸入文章標題'
+                    }
+
+                    ]
+                }
+            }
+        }
+    );
+
+
+</script>
+</body>
+</html>
